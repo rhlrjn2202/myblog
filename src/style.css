@@ -77,6 +77,8 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.4;
+  letter-spacing: -0.2px;
+  font-weight: 400;
 }
 
 /* A elements that don't have a class get default styles */
