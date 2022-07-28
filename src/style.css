@@ -125,6 +125,9 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
+  line-height: 1.4;
+  letter-spacing: -0.2px;
+  font-weight: 400;
 }
 
 h1,
