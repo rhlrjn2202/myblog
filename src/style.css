@@ -6,7 +6,7 @@
   --fs-700: 2rem;
 
   --ff-body: "calluna-sans", sans-serif;
-  --ff-heading: "calluna-sans", serif;
+  --ff-heading: "calluna-sans", sans-serif;
 
   --fw-400: 400;
   --fw-700: 700;
@@ -135,7 +135,7 @@ h2,
 h3 {
   font-family: var(--ff-heading);
   font-weight: var(--fw-900);
-  line-height: 1.1;
+  line-height: 1.33;
 }
 
 strong {
