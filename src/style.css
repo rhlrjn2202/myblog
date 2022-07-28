@@ -24,7 +24,7 @@
   --clr-neutral-900: hsla(0, 0%, 10%, 1);
 }
 
-@media (min-width: 35em) {
+@media (min-width: 40em) {
   :root {
     --fs-300: 1rem;
     --fs-400: 1.25rem;
