@@ -76,7 +76,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.4;
+  line-height: 28px;
   letter-spacing: -0.2px;
   font-weight: 400;
 }
@@ -125,7 +125,7 @@ body {
   font-family: var(--ff-body);
   font-size: var(--fs-400);
   color: var(--clr-neutral-900);
-  line-height: 1.4;
+  line-height: 28px;
   letter-spacing: -0.2px;
   font-weight: 400;
 }
