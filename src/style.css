@@ -16,6 +16,7 @@
   --clr-primary-300: hsla(169, 100%, 39%, 1);
   --clr-primary-400: hsla(156, 100%, 38%, 1);
   --clr-primary-500: hsla(156, 100%, 37%, 1);
+  --clr-primary-600: hsla(205, 29%, 16%, 1);
 
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
@@ -235,7 +236,7 @@ section,
   --logo-color: currentColor;
   padding: 2em 0;
   color: var(--clr-neutral-100);
-  background-color: var(--clr-primary-500);
+  background-color: var(--clr-primary-600);
   text-align: center;
 }
 
