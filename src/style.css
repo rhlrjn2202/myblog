@@ -5,8 +5,8 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: Georgia, serif;
-  --ff-heading: "Alaska", sans-serif;
+  --ff-body: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --ff-heading: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 
   --fw-400: 400;
   --fw-700: 700;
