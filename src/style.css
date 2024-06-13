@@ -149,6 +149,8 @@ section,
   padding: min(10vh, 10em) 0;
 }
 
+
+
 /* //////////////////////
   Utility Classes
   /////////////////////// */
@@ -196,6 +198,7 @@ section,
   font-size: var(--fs-600);
 }
 
+
 /* //////////////////////
   Header
   /////////////////////// */
@@ -207,14 +210,11 @@ section,
 .page-header__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .nav-list {
   margin: 0;
   padding: 0;
-  display: flex;
-  gap: 1em;
 }
 
 .nav-list a {
@@ -277,15 +277,15 @@ section,
   Individual article page
   /////////////////////// */
 
-.main-article {
-  margin-bottom: 3rem;
-}
+  .main-article {
+    margin-bottom: 3rem;
+  }
 
-.main-article__figure figcaption {
-  margin: 1rem 0;
-  font-size: var(--fs-300);
-  opacity: .9;
-}
+  .main-article__figure figcaption {
+    margin: 1rem 0;
+    font-size: var(--fs-300);
+    opacity: .9;
+  }
 
 /* //////////////////////
   Article snippets
@@ -392,86 +392,3 @@ section,
   color: var(--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
-
-/* //////////////////////
-  Responsive Navigation
-  /////////////////////// */
-
-.nav-toggle {
-  display: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-}
-
-.nav-toggle .hamburger {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: var(--clr-neutral-900);
-  position: relative;
-}
-
-.nav-toggle .hamburger::before,
-.nav-toggle .hamburger::after {
-  content: '';
-  display: block;
-  width: 30px;
-  height: 3px;
-  background: var(--clr-neutral-900);
-  position: absolute;
-  transition: transform 0.3s ease;
-}
-
-.nav-toggle .hamburger::before {
-  top: -8px;
-}
-
-.nav-toggle .hamburger::after {
-  bottom: -8px;
-}
-
-@media (max-width: 768px) {
-  .nav {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background: white;
-    width: 200px;
-    flex-direction: column;
-    align-items: flex-start;
-    display: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  }
-
-  .nav.active {
-    display: flex;
-  }
-
-  .nav-list {
-    flex-direction: column;
-  }
-
-  .nav-list li {
-    margin: 10px 0;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .nav-toggle.active .hamburger {
-    transform: rotate(45deg);
-  }
-
-  .nav-toggle.active .hamburger::before {
-    transform: translateY(8px) rotate(90deg);
-  }
-
-  .nav-toggle.active .hamburger::after {
-    transform: translateY(-8px) rotate(90deg);
-  }
-}
-
