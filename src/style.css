@@ -5,7 +5,7 @@
   --fs-600: 1.875rem;
   --fs-700: 2rem;
 
-  --ff-body: Nunito, sans-serif;
+  --ff-body: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   --ff-heading: Nunito, sans-serif;
 
   --fw-400: 400;
@@ -78,7 +78,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.8;
+  line-height: 1.7;
   letter-spacing: -.5px;
   font-weight: 400;
 }
@@ -129,7 +129,7 @@ body {
   color: var(--clr-neutral-900);
   line-height: 1.7;
   letter-spacing: -.5px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1,
