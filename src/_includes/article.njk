@@ -10,11 +10,11 @@ url: '{{ url }}'
 ---
 
 <article class="main-article">
-<div class="container container--narrow flow">
-  
+  <div class="container container--narrow flow">
     <h1 class="article-title">
       {{ title }}
     </h1>
+    <p class="article-meta">Published on {{ date | date('YYYY-MM-DD') }} by {{ author }}</p>
     <figure class="main-article__figure">
       <img src="{{ image }}" alt="{{ imageAlt }}">
       <figcaption>
@@ -23,5 +23,40 @@ url: '{{ url }}'
     </figure>
     
     {{ content | safe }}
-</div>
+  </div>
 </article>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ url }}"
+  },
+  "headline": "{{ seo_title }}",
+  "description": "{{ seo_description }}",
+  "image": {
+    "@type": "ImageObject",
+    "url": "{{ seo_image }}",
+    "height": 800,
+    "width": 1200
+  },
+  "author": {
+    "@type": "Person",
+    "name": "{{ author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Your Organization Name",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "URL to your organization's logo",
+      "width": 200,
+      "height": 200
+    }
+  },
+  "datePublished": "{{ date | date('YYYY-MM-DD') }}",
+  "dateModified": "{{ date | date('YYYY-MM-DD') }}"
+}
+</script>
