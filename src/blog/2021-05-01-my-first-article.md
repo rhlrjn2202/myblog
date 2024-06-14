@@ -1,5 +1,5 @@
 ---
-author: Kevin Powell
+author: Rahul
 imageALT: test image
 imageAlt: This is a test
 title: My First Article
@@ -7,11 +7,12 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit.
   Perferendis accusantium sit illo neque rem omnis quaerat, nam similique vitae
   delectus ad magni vel quo maxime, magnam placeat. Reprehenderit, distinctio
   aliquam?
-date: 2021-05-01
+date: 2021-05-05T18:30:00.000Z
 tags:
   - post
   - featured
 image: /assets/blog/article-1.jpg
+seo_description: test
 ---
 T﻿his works
 
