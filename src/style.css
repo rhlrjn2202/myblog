@@ -80,7 +80,7 @@ body {
   text-rendering: optimizeSpeed;
   line-height: 1.8;
   letter-spacing: -.5px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 /* A elements that don't have a class get default styles */
@@ -129,7 +129,7 @@ body {
   color: var(--clr-neutral-900);
   line-height: 1.8;
   letter-spacing: -.5px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 h1,
