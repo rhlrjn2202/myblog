@@ -374,10 +374,17 @@ section,
   background-color: var(--clr-neutral-900);
 }
 
-/* Form Styles */
+/* Form Container Styles */
 form {
   max-width: 600px;
-  margin: 0 auto;
+  margin: 0 auto; /* Center the form horizontally */
+}
+
+@media (min-width: 768px) {
+  form {
+    display: flex;
+    justify-content: flex-start; /* Align form to the left on larger screens */
+  }
 }
 
 form p {
@@ -425,4 +432,5 @@ form button:focus {
   background-color: var(--clr-primary-500);
   outline: none;
 }
+
 
