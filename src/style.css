@@ -378,6 +378,10 @@ section,
 form {
   max-width: 600px;
   margin: 0 auto; /* Center the form horizontally */
+  padding: 2rem; /* Add padding for spacing */
+  background-color: var(--clr-primary-200); /* Light background color */
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 @media (min-width: 768px) {
@@ -395,8 +399,8 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
   width: 100%;
-  padding: 0.75rem;
-  font-size: var(--fs-300);
+  padding: 1rem; /* Increase padding for better spacing */
+  font-size: 1rem; /* Adjust font size */
   border: 1px solid var(--clr-neutral-300);
   border-radius: 0.25rem;
   transition: border-color 0.3s ease;
@@ -415,16 +419,17 @@ form textarea:focus {
   border-color: var(--clr-primary-400);
 }
 
-/* Adjusted Button Styles */
+/* Button Styles */
 form button {
   width: 100%; /* Make the button occupy 100% of the parent width */
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
   font-weight: var(--fw-700);
-  padding: 0.75rem;
+  padding: 1rem; /* Increase padding for better button size */
   border: none;
   border-radius: 0.25rem;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 form button:hover,
@@ -432,5 +437,6 @@ form button:focus {
   background-color: var(--clr-primary-500);
   outline: none;
 }
+
 
 
