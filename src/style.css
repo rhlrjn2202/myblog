@@ -117,33 +117,6 @@ select {
   }
 }
 
-/* General Styles */
-.content-wrapper {
-  display: flex;
-  justify-content: center;
-  background-color: #fbfbfb;
-  padding: 2rem 0;
-}
-
-/* Container styling for content */
-.container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 2rem 1.5rem;
-  background-color: var(--clr-neutral-100); /* Assuming the content area is white */
-}
-
-/* Specific to blog and article pages */
-body.blog-page .container,
-body.article-page .container {
-  background-color: var(--clr-neutral-100);
-}
-
-/* Ensuring other pages are not affected */
-body:not(.blog-page) .container,
-body:not(.article-page) .container {
-  background-color: transparent;
-}
 
 
 /* General styling */
