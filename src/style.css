@@ -374,19 +374,18 @@ section,
   background-color: var(--clr-neutral-900);
 }
 
-/* Form Styles */
-.contact-form {
+form {
   max-width: 600px;
   margin: 0 auto;
 }
 
-.contact-form p {
+form p {
   margin-bottom: 1.5rem;
 }
 
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
+form input[type="text"],
+form input[type="email"],
+form textarea {
   width: 100%;
   padding: 0.75rem;
   font-size: var(--fs-300);
@@ -395,21 +394,21 @@ section,
   transition: border-color 0.3s ease;
 }
 
-.contact-form input[type="text"]::placeholder,
-.contact-form input[type="email"]::placeholder,
-.contact-form textarea::placeholder {
+form input[type="text"]::placeholder,
+form input[type="email"]::placeholder,
+form textarea::placeholder {
   color: var(--clr-neutral-400);
 }
 
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus {
+form input[type="text"]:focus,
+form input[type="email"]:focus,
+form textarea:focus {
   outline: none;
   border-color: var(--clr-primary-400);
 }
 
 /* Adjusted Button Styles */
-.contact-form button {
+form button {
   width: 100%; /* Make the button occupy 100% of the parent width */
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
@@ -420,10 +419,13 @@ section,
   cursor: pointer;
 }
 
-.contact-form button:hover,
-.contact-form button:focus {
+form button:hover,
+form button:focus {
   background-color: var(--clr-primary-500);
   outline: none;
 }
 
-
+/* Styling for reCAPTCHA */
+.g-recaptcha {
+  margin-bottom: 1.5rem; /* Adjust margin as needed */
+}
