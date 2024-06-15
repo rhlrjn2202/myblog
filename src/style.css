@@ -298,7 +298,7 @@ section,
 }
 
 .snippet__meta span {
-  color: var(--clr-neutral-900);
+  color: var (--clr-neutral-900);
 }
 
 .snippet .btn {
@@ -370,7 +370,7 @@ section,
 
 .btn--neutral:hover,
 .btn--neutral:focus {
-  color: var(--clr-neutral-100);
+  color: var (--clr-neutral-100);
   background-color: var(--clr-neutral-900);
 }
 
