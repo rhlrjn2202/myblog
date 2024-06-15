@@ -375,18 +375,18 @@ section,
 }
 
 /* Form Styles */
-form {
+.contact-form {
   max-width: 600px;
   margin: 0 auto;
 }
 
-form p {
+.contact-form p {
   margin-bottom: 1.5rem;
 }
 
-form input[type="text"],
-form input[type="email"],
-form textarea {
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
   width: 100%;
   padding: 0.75rem;
   font-size: var(--fs-300);
@@ -395,21 +395,21 @@ form textarea {
   transition: border-color 0.3s ease;
 }
 
-form input[type="text"]::placeholder,
-form input[type="email"]::placeholder,
-form textarea::placeholder {
+.contact-form input[type="text"]::placeholder,
+.contact-form input[type="email"]::placeholder,
+.contact-form textarea::placeholder {
   color: var(--clr-neutral-400);
 }
 
-form input[type="text"]:focus,
-form input[type="email"]:focus,
-form textarea:focus {
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
   outline: none;
   border-color: var(--clr-primary-400);
 }
 
 /* Adjusted Button Styles */
-form button {
+.contact-form button {
   width: 100%; /* Make the button occupy 100% of the parent width */
   background-color: var(--clr-primary-400);
   color: var(--clr-neutral-100);
@@ -420,9 +420,10 @@ form button {
   cursor: pointer;
 }
 
-form button:hover,
-form button:focus {
+.contact-form button:hover,
+.contact-form button:focus {
   background-color: var(--clr-primary-500);
   outline: none;
 }
+
 
