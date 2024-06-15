@@ -8,8 +8,6 @@ description: 'Get in touch with us'
     <div class="container">
         <h1>Contact Us</h1>
         <p>Have a question or want to work together? Fill out the form below!</p>
-        <br>
-        <br>
 
         <!-- Form with Netlify attributes for form detection and reCAPTCHA -->
         <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
@@ -25,9 +23,9 @@ description: 'Get in touch with us'
             <p>
                 <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
             </p>
-            <div data-netlify-recaptcha="true" class="g-recaptcha" required></div>
+            <div data-netlify-recaptcha="true"></div>
             <p>
-                <button type="submit">Send</button>
+                <button type="submit">Send Message</button>
             </p>
         </form>
     </div>
