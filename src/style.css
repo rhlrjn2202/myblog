@@ -4,20 +4,16 @@
   --fs-500: 1.375rem;
   --fs-600: 1.875rem;
   --fs-700: 2rem;
-
   --ff-body: system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Open Sans, Helvetica Neue, sans-serif;
   --ff-heading: Nunito, sans-serif;
-
   --fw-400: 400;
   --fw-700: 700;
   --fw-900: 900;
-
   --clr-primary-200: hsla(169, 70%, 95%, 1);
   --clr-primary-300: hsla(169, 100%, 39%, 1);
   --clr-primary-400: hsla(156, 100%, 38%, 1);
   --clr-primary-500: hsla(156, 100%, 37%, 1);
   --clr-primary-600: hsla(205, 29%, 16%, 1);
-
   --clr-neutral-100: hsla(0, 0%, 100%, 1);
   --clr-neutral-300: hsla(0, 0%, 50%, 1);
   --clr-neutral-400: hsla(0, 0%, 40%, 1);
@@ -116,8 +112,6 @@ select {
     scroll-behavior: auto !important;
   }
 }
-
-
 
 /* General styling */
 
@@ -239,7 +233,7 @@ section,
 .mobile-nav-toggle span {
   width: 1.5rem;
   height: 0.2rem;
-  background-color: var(--logo-color, #000);
+  background-color: var(--clr-neutral-900);
 }
 
 /* Mobile navigation styles */
@@ -267,7 +261,7 @@ section,
 .mobile-nav-list li a {
   display: block;
   padding: 1rem;
-  color: var(--logo-color, #000);
+  color: var(--clr-neutral-900);
   text-decoration: none;
 }
 
@@ -279,8 +273,10 @@ section,
   .mobile-nav-toggle {
     display: flex;
   }
+  .mobile-nav.active {
+    display: block;
+  }
 }
-
 
 /* Footer Styles */
 .site-footer {
@@ -361,11 +357,6 @@ section,
     margin-top: 1rem;
   }
 }
-
-
-
-
-
 
 /* Homepage */
 
