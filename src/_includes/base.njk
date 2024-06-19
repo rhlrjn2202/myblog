@@ -49,5 +49,18 @@ if (window.netlifyIdentity) {
 }
 </script>
 
+<!-- Include the mobile navigation script -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    mobileNavToggle.addEventListener('click', function() {
+      mobileNav.classList.toggle('active');
+      mobileNavToggle.classList.toggle('open');
+    });
+  });
+</script>
+
 </body>
 </html>
