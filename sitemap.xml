@@ -3,12 +3,70 @@ permalink: /sitemap.xml
 eleventyExcludeFromCollections: true
 ---
 
-<?xml version="1.0" encoding="utf-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for page in collections.all %}
-  <url>
-    <loc>{{ site.url }}{{ page.url | url }}</loc>
-    <lastmod>{{ page.date.toISOString() }}</lastmod>
-  </url>
-  {% endfor %}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://ecotechreviews.com/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/about/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/contact/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2024-06-14-test-blog-2/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2021-06-15-my-fifth-article/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2021-05-28-my-third-article/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2021-05-01-my-first-article/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2024-06-14-this-is-a-test-blog/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2021-06-01-my-fourth-article/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://ecotechreviews.com/blog/2021-05-15-my-second-article/</loc>
+  <lastmod>2024-06-20T15:58:36+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
 </urlset>
