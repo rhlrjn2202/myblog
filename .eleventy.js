@@ -1,4 +1,5 @@
-// .eleventy.js
+const path = require('path');
+const { generateSitemap } = require('./sitemap');
 
 module.exports = function(eleventyConfig) {
     // Add passthrough copy for static files
@@ -6,26 +7,31 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
     eleventyConfig.addPassthroughCopy('./src/admin');
 
-    // Define a custom collection of items
+    // Define a custom collection of items (optional)
     eleventyConfig.addCollection('myCollection', function(collection) {
-        // Return an array of items
         return collection.getAll();
+    });
+
+    // Custom filter to generate blog post permalinks without the date
+    eleventyConfig.addFilter('slugify', function(str) {
+        return str.toLowerCase().replace(/\s+/g, '-');
+    });
+
+    // Custom filter to generate blog post permalinks
+    eleventyConfig.addFilter('blogPostPermalink', function(page) {
+        // Use the title or slugified title for permalink
+        const title = page.data.title;
+        return `/blog/${this.slugify(title)}/`;
     });
 
     // Generate sitemap after build
     eleventyConfig.on('afterBuild', async () => {
         try {
-            // Get all items from the collection
-            const items = eleventyConfig.getCollections().myCollection.map(item => {
-                return {
-                    url: item.url
-                };
-            });
+            const items = eleventyConfig.getCollections().myCollection.map(item => ({
+                url: item.url
+            }));
 
-            // Define the output path for the sitemap
             const outputPath = path.join(__dirname, 'public', 'sitemap.xml');
-
-            // Generate the sitemap
             await generateSitemap(outputPath, items);
         } catch (error) {
             console.error('Error generating sitemap:', error);
