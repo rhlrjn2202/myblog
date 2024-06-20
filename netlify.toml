@@ -1,0 +1,12 @@
+[build]
+  node_version = "20.x"
+  publish = "public"
+  command = "npm run build"
+
+[functions]
+  node_bundler = "esbuild"
+  directory = "functions"
+
+[dev]
+  framework = "#auto"
+  auto_rewrite = true
