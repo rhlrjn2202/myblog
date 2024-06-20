@@ -10,7 +10,9 @@ module.exports = function(eleventyConfig) {
     // Add the sitemap plugin
     eleventyConfig.addPlugin(sitemap, {
         sitemap: {
-            hostname: "https://www.yourwebsite.com", // Replace with your website URL
+            hostname: "https://ecotechreviews.com", // Replace with your website URL
+            changefreq: "daily",
+            priority: "0.5",
         },
     });
 
