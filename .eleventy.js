@@ -1,19 +1,36 @@
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const { generateSitemap } = require("./sitemap");
+const path = require("path");
 
 module.exports = function(eleventyConfig) {
+    // Function to filter out drafts based on front matter
+    eleventyConfig.addFilter("published", function(collection) {
+        return collection.filter(item => item.data.draft !== true);
+    });
 
     // Pass-through copy for static files
-    eleventyConfig.addPassthroughCopy('./src/style.css');
-    eleventyConfig.addPassthroughCopy('./src/assets');
-    eleventyConfig.addPassthroughCopy('./src/admin');
+    eleventyConfig.addPassthroughCopy("./src/style.css");
+    eleventyConfig.addPassthroughCopy("./src/assets");
+    eleventyConfig.addPassthroughCopy("./src/admin");
 
-    // Add the sitemap plugin
-    eleventyConfig.addPlugin(sitemap, {
-        sitemap: {
-            hostname: "https://ecotechreviews.com", // Replace with your website URL
-            changefreq: "daily",
-            priority: "0.5",
-        },
+    // Define a collection for blog posts
+    eleventyConfig.addCollection("blogPosts", function(collection) {
+        return collection.getFilteredByGlob("src/blog/*.md").filter(item => !item.data.draft);
+    });
+
+    // Generate sitemap after build
+    eleventyConfig.on("afterBuild", () => {
+        // Access the 'blogPosts' collection
+        const items = eleventyConfig.getCollections("blogPosts").map(item => {
+            return {
+                url: item.url
+            };
+        });
+
+        // Define the output path for the sitemap
+        const outputPath = path.join(__dirname, "public", "sitemap.xml");
+
+        // Generate the sitemap
+        generateSitemap(outputPath, items);
     });
 
     return {

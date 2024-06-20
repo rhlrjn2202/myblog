@@ -1,4 +1,5 @@
-const sitemap = require("@quasibit/eleventy-plugin-sitemap");
+const { generateSitemap } = require("./sitemap");
+const path = require("path");
 
 module.exports = function(eleventyConfig) {
 
@@ -7,13 +8,20 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('./src/assets');
     eleventyConfig.addPassthroughCopy('./src/admin');
 
-    // Add the sitemap plugin
-    eleventyConfig.addPlugin(sitemap, {
-        sitemap: {
-            hostname: "https://ecotechreviews.com", // Replace with your website URL
-            changefreq: "daily",
-            priority: "0.5",
-        },
+    // Generate sitemap after build
+    eleventyConfig.on("afterBuild", () => {
+        // Collecting items for the sitemap
+        const items = eleventyConfig.collections.all().map(item => {
+            return {
+                url: item.url
+            };
+        });
+
+        // Define the output path for the sitemap
+        const outputPath = path.join(__dirname, "public", "sitemap.xml");
+
+        // Generate the sitemap
+        generateSitemap(outputPath, items);
     });
 
     return {
