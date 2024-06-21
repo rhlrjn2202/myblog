@@ -12,6 +12,8 @@
    <meta property="og:image" content="{{ seo_image }}">
    <meta name="robots" content="index, follow">
    <link rel="stylesheet" href="/style.css">
+   <link rel="icon" type="image/png" href="/assets/favicon.png"> <!-- Replace with your favicon path -->
+
    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
    <!-- Google Analytics -->
@@ -48,18 +50,15 @@ if (window.netlifyIdentity) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
 
-<!-- Include the mobile navigation script -->
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const mobileNavToggle = document.getElementById('mobile-nav-toggle');
-    const mobileNav = document.getElementById('mobile-nav');
-
-    mobileNavToggle.addEventListener('click', function() {
-      mobileNav.classList.toggle('active');
-      mobileNavToggle.classList.toggle('open');
-    });
+  mobileNavToggle.addEventListener('click', function() {
+    mobileNav.classList.toggle('active');
+    mobileNavToggle.classList.toggle('open');
   });
+});
 </script>
 
 </body>
