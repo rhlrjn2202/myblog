@@ -632,5 +632,67 @@ img.logo::after {
   visibility: hidden;
 }
 
+/* Flex container for footer-top */
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+}
+
+/* Footer logo */
+.footer-logo {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Social media icons */
+.social-media {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icon img {
+  width: 30px; /* Adjust the size of social media icons */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Ensure the logo scales down on smaller screens */
+@media (max-width: 768px) {
+  .footer-logo {
+    width: 160px; /* Adjust for smaller screens */
+  }
+
+  .social-icon img {
+    width: 25px; /* Adjust for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-logo {
+    width: 120px; /* Adjust for very small screens */
+  }
+
+  .social-icon img {
+    width: 20px; /* Adjust for very small screens */
+  }
+}
+
+/* Disable right-click on the footer logo */
+.footer-logo-link, .footer-logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
+
+
+
+
 
 
