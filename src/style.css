@@ -595,9 +595,5 @@ form button:focus {
 }
 
 /* Adjust the containing div if necessary */
-.page-header__content > div {
-    display: flex;
-    align-items: center; /* Ensure the logo and nav are aligned properly */
-}
 
 
