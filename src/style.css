@@ -594,6 +594,43 @@ form button:focus {
     margin-top: -20px; /* Adjust this value to move the logo up */
 }
 
-/* Adjust the containing div if necessary */
+/* Move logo up */
+.page-header__content img.logo {
+  position: relative;
+  top: -10px; /* Adjust this value as needed */
+}
+
+/* Prevent image download */
+img.logo {
+  pointer-events: none;
+}
+
+.page-header__content a {
+  display: inline-block;
+  pointer-events: auto;
+}
+
+/* Disable right-click on the logo */
+img.logo {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+img.logo {
+  -webkit-touch-callout: none;
+  -webkit-user-drag: none;
+  -moz-user-drag: none;
+  -ms-user-drag: none;
+  user-drag: none;
+}
+
+img.logo::after {
+  content: url('/assets/eco_tech_master_logo_1.png');
+  display: block;
+  visibility: hidden;
+}
+
 
 
