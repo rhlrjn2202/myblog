@@ -632,6 +632,8 @@ img.logo::after {
   visibility: hidden;
 }
 
+/*Footer*/
+
 /* Flex container for footer-top */
 .flex-container {
   display: flex;
@@ -641,6 +643,10 @@ img.logo::after {
 }
 
 /* Footer logo */
+.footer-logo-container {
+  width: auto;
+}
+
 .footer-logo {
   width: 200px; /* Adjust the width as needed */
   height: auto; /* Maintain aspect ratio */
