@@ -1,4 +1,5 @@
-// .eleventy.js
+const path = require('path');
+const fs = require('fs');
 
 module.exports = function(eleventyConfig) {
     // Add passthrough copy for static files
@@ -8,15 +9,15 @@ module.exports = function(eleventyConfig) {
 
     // Define a custom collection of items
     eleventyConfig.addCollection('myCollection', function(collection) {
-        // Return an array of items
-        return collection.getAll();
+        // Return an array of items excluding /admin/
+        return collection.getAll().filter(item => !item.url.startsWith('/admin/'));
     });
 
     // Generate sitemap after build
     eleventyConfig.on('afterBuild', async () => {
         try {
             // Get all items from the collection
-            const items = eleventyConfig.getCollections().myCollection.map(item => {
+            const items = eleventyConfig.collections.myCollection.map(item => {
                 return {
                     url: item.url
                 };
@@ -39,3 +40,16 @@ module.exports = function(eleventyConfig) {
         }
     };
 };
+
+// Function to generate sitemap
+async function generateSitemap(outputPath, items) {
+    const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    ${items.map(item => `
+    <url>
+        <loc>${item.url}</loc>
+    </url>`).join('')}
+</urlset>`;
+
+    fs.writeFileSync(outputPath, sitemap);
+}
