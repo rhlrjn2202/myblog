@@ -10,14 +10,14 @@ module.exports = function(eleventyConfig) {
     // Define a custom collection of items
     eleventyConfig.addCollection('myCollection', function(collection) {
         // Return an array of items excluding /admin/
-        return collection.getAll().filter(item => !item.url.startsWith('/admin/'));
+        return collection.getAll();
     });
 
     // Generate sitemap after build
     eleventyConfig.on('afterBuild', async () => {
         try {
-            // Get all items from the collection
-            const items = eleventyConfig.collections.myCollection.map(item => {
+            // Get all items from the collection and filter out /admin/ URL
+            const items = eleventyConfig.collections.myCollection().filter(item => !item.url.includes('/admin/')).map(item => {
                 return {
                     url: item.url
                 };
