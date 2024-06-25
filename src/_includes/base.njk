@@ -63,9 +63,34 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 </script>
 
-<!-- Inside base.njk or layout file -->
-<script src="src/scripts/main.js"></script>
+<script>
+  // Get the move-up button element
+const moveUpButton = document.getElementById('move-up-button');
 
+// Function to toggle visibility of the move-up button
+function toggleMoveUpButtonVisibility() {
+  if (window.scrollY > window.innerHeight * 0.6) {
+    moveUpButton.classList.add('visible');
+  } else {
+    moveUpButton.classList.remove('visible');
+  }
+}
+
+// Function to scroll back to the top of the page
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}
+
+// Event listener for scroll events
+window.addEventListener('scroll', toggleMoveUpButtonVisibility);
+
+// Event listener for click events on the move-up button
+moveUpButton.addEventListener('click', scrollToTop);
+
+</script>
 
 </body>
 </html>

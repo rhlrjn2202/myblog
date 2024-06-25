@@ -33,26 +33,4 @@ url: '{{ url }}'
     </svg>
   </button>
   
-  <script>
-    // JavaScript code goes here
-    const moveUpButton = document.getElementById('move-up-button');
-
-    function toggleMoveUpButtonVisibility() {
-      if (window.scrollY > window.innerHeight * 0.9) {
-        moveUpButton.classList.add('visible');
-      } else {
-        moveUpButton.classList.remove('visible');
-      }
-    }
-
-    function scrollToTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    }
-
-    window.addEventListener('scroll', toggleMoveUpButtonVisibility);
-    moveUpButton.addEventListener('click', scrollToTop);
-  </script>
 </article>
