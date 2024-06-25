@@ -10,11 +10,12 @@ url: '{{ url }}'
 ---
 
 <article class="main-article">
-<div class="container container--narrow flow">
+  <div class="container container--narrow flow">
   
     <h1 class="article-title">
       {{ title }}
     </h1>
+    
     <figure class="main-article__figure">
       <img src="{{ image }}" alt="{{ imageAlt }}">
       <figcaption>
@@ -23,5 +24,35 @@ url: '{{ url }}'
     </figure>
     
     {{ content | safe }}
-</div>
+    
+  </div>
+  
+  <button id="move-up-button" class="move-up-button" aria-label="Move to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M12 2L0 14h6v8h12v-8h6L12 2zm0 4.83L18.17 14H13v8h-2v-8H5.83L12 6.83z"/>
+    </svg>
+  </button>
+  
+  <script>
+    // JavaScript code goes here
+    const moveUpButton = document.getElementById('move-up-button');
+
+    function toggleMoveUpButtonVisibility() {
+      if (window.scrollY > window.innerHeight * 0.9) {
+        moveUpButton.classList.add('visible');
+      } else {
+        moveUpButton.classList.remove('visible');
+      }
+    }
+
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+
+    window.addEventListener('scroll', toggleMoveUpButtonVisibility);
+    moveUpButton.addEventListener('click', scrollToTop);
+  </script>
 </article>
