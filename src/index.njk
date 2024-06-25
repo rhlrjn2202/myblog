@@ -8,32 +8,26 @@ layout: 'base.njk'
     <div class="hero__content flow">
       <h2 class="hero__subtitle" style="color: #00d07e; margin-bottom: 5px;">Welcome to Eco Tech Reviews</h2>
       <h1 class="section-title" style="color: black; margin-top: 0; line-height: 1.2;">Your Guide to Eco-Friendly Tech Gadgets</h1>
-      <p>Explore the latest in sustainable technology. Discover top eco-friendly gadgets, from solar-powered devices to energy-efficient appliances. Dive into our Blog</a> for the latest reviews and guides.</p>
+      <p>Explore the latest in sustainable technology. Discover top eco-friendly gadgets, from solar-powered devices to energy-efficient appliances. Dive into our <a href="./blog" class="text-link">Blog</a> for the latest reviews and guides.</p>
       <div class="flex-group">
         <a href="#featured-articles" class="btn btn--primary">Featured articles</a>
         <a href="./blog" class="btn btn--neutral">Most recent articles</a>
       </div>
     </div>
     <div>
-      <img src="assets/hero_img_m.png" alt="" class="hero__image">
+      <img src="assets/hero_img_m.png" loading="lazy" alt="" class="hero__image">
     </div>
   </div>
 </section>
 
-
-
 <section id="featured-articles" class="featured-articles">
   <div class="container flow">
-    <h2 class="section-title text-center ">Featured articles</h2>
-    <p class="text-center">Here is a sample of articles which I feel give you a good idea of what this site is all about.</p>
+    <h2 class="section-title text-center">Featured articles</h2>
+    <p class="text-center">Here are some sample articles that showcase what our site is all about.</p>
     <ul role="list" class="articles__list flow">
-
-       {%- for post in collections.featured | reverse -%}
-          {% include 'article-snippet.njk' %}
-       {%- endfor -%}
-
-</ul>
+      {%- for post in collections.featured | reverse -%}
+        {% include 'article-snippet.njk' %}
+      {%- endfor -%}
+    </ul>
   </div>
-</section> 
-
-
+</section>
