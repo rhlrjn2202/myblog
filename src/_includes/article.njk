@@ -1,0 +1,36 @@
+---
+layout: 'base.njk'
+title: '{{ title }}'
+description: '{{ description }}'
+seo_title: '{{ seo_title }}'
+seo_description: '{{ seo_description }}'
+seo_keywords: '{{ seo_keywords }}'
+seo_image: '{{ seo_image }}'
+url: '{{ url }}'
+---
+
+<article class="main-article">
+  <div class="container container--narrow flow">
+  
+    <h1 class="article-title" style="line-height: 1.2;">
+      {{ title }}
+    </h1>
+    
+    <figure class="main-article__figure">
+      <img src="{{ image }}" alt="{{ imageAlt }}" loading="lazy">
+      <figcaption>
+        {{ imageAlt }}
+      </figcaption>
+    </figure>
+    
+    {{ content | safe }}
+    
+  </div>
+  
+  <button id="move-up-button" class="move-up-button" aria-label="Move to top">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M12 2L0 14h6v8h12v-8h6L12 2zm0 4.83L18.17 14H13v8h-2v-8H5.83L12 6.83z"/>
+    </svg>
+  </button>
+  
+</article>

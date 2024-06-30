@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "gulp build --gulpfile gulpfile.mjs"
+    "build": "eleventy && gulp"
   },
   "keywords": [],
   "author": "",
@@ -13,17 +13,12 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-gzip": "^1.4.2",
-    "gulp-imagemin": "^9.1.0",
+    "gulp-imagemin": "^7.1.0",
     "luxon": "^3.0.1"
   },
   "engines": {
     "node": ">=20.0.0"
-  },
-  "dependencies": {
-    "del": "^7.1.0",
-    "pjax-api": "^3.44.0",
-    "util": "^0.12.5"
   }
 }
