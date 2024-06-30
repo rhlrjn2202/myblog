@@ -21,4 +21,15 @@ document.addEventListener('pjax:complete', () => {
       'page_path': window.location.pathname
     });
   }
+  // Reinitialize lazy loading if necessary
+  if (typeof lazyLoadInstance !== 'undefined') {
+    lazyLoadInstance.update();
+  }
+  // Manually reinitialize images if needed
+  const images = document.querySelectorAll('img[loading="lazy"]');
+  images.forEach(img => {
+    if (!img.complete) {
+      img.src = img.getAttribute('src');
+    }
+  });
 });
