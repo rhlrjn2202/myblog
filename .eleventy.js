@@ -1,4 +1,6 @@
-// .eleventy.js
+const path = require('path');
+const { exec } = require('child_process');
+const generateSitemap = require('@quasibit/eleventy-plugin-sitemap').generateSitemap;
 
 module.exports = function(eleventyConfig) {
     // Add passthrough copy for static files
@@ -27,6 +29,18 @@ module.exports = function(eleventyConfig) {
 
             // Generate the sitemap
             await generateSitemap(outputPath, items);
+
+            // Run Gulp tasks
+            exec('npx gulp', (error, stdout, stderr) => {
+                if (error) {
+                    console.error(`Error executing gulp: ${error}`);
+                    return;
+                }
+                console.log(`Gulp output:\n${stdout}`);
+                if (stderr) {
+                    console.error(`Gulp stderr:\n${stderr}`);
+                }
+            });
         } catch (error) {
             console.error('Error generating sitemap:', error);
         }
