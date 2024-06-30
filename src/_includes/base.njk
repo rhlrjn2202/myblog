@@ -46,24 +46,24 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     var lazyLoadInstance = new LazyLoad({
-      elements_selector: "img"
+      elements_selector: "img[data-src]",
     });
-  });
 
-  document.addEventListener('pjax:complete', function() {
-    if (typeof gtag === 'function') {
-      gtag('config', 'G-33KK9XWT1K', {
-        'page_path': window.location.pathname
-      });
-    }
-    if (typeof LazyLoad !== 'undefined') {
-      lazyLoadInstance.update();
-    } else {
-      var images = document.querySelectorAll('img[loading="lazy"]');
-      images.forEach(function(img) {
-        img.src = img.getAttribute('data-src');
-      });
-    }
+    document.addEventListener('pjax:complete', function() {
+      if (typeof gtag === 'function') {
+        gtag('config', 'G-33KK9XWT1K', {
+          'page_path': window.location.pathname
+        });
+      }
+      if (typeof LazyLoad !== 'undefined') {
+        lazyLoadInstance.update();
+      } else {
+        var images = document.querySelectorAll('img[loading="lazy"]');
+        images.forEach(function(img) {
+          img.src = img.getAttribute('data-src');
+        });
+      }
+    });
   });
 </script>
 
