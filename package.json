@@ -20,5 +20,8 @@
   },
   "engines": {
     "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "pjax-api": "^3.44.0"
   }
 }
