@@ -1,5 +1,5 @@
 ---
-title: How Can Eco-friendly Tech Gadgets Contribute To A Greener Planet?
+title: How Can Eco-friendly Tech Gadgets Contribute To A Greener Planet? Test
 description: Discover how eco-friendly tech gadgets can contribute to a greener
   planet by reducing e-waste, energy consumption, and carbon footprint. Explore
   sustainable materials and renewable energy sources.
