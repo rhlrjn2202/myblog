@@ -122,7 +122,7 @@ To actively support the eco-friendly tech movement, choose to purchase from bran
 
 Encouraging technological innovation and development in the eco-friendly tech sector is key to driving progress towards a greener planet. By showing **interest in sustainable tech solutions** and **advocating for eco-friendly design practices**, you can help shape the future of the industry. Encouraging companies to invest in **research and development** for eco-friendly alternatives and supporting policies that promote sustainability can lead to breakthroughs in green technology. Your support and advocacy play a crucial role in accelerating the transition to a more **sustainable tech landscape**.
 
-![](/assets/blog/ecofriendly-tech-gadgets-and-a-greener-planet-vax.jpg)
+
 
 ## Summing up
 
