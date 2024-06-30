@@ -22,14 +22,12 @@ document.addEventListener('pjax:complete', () => {
     });
   }
   // Reinitialize lazy loading if necessary
-  if (typeof lazyLoadInstance !== 'undefined') {
+  if (typeof LazyLoad !== 'undefined') {
     lazyLoadInstance.update();
+  } else {
+    const images = document.querySelectorAll('img[loading="lazy"]');
+    images.forEach(img => {
+      img.src = img.getAttribute('data-src');
+    });
   }
-  // Manually reinitialize images if needed
-  const images = document.querySelectorAll('img[loading="lazy"]');
-  images.forEach(img => {
-    if (!img.complete) {
-      img.src = img.getAttribute('src');
-    }
-  });
 });
