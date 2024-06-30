@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy && gulp"
+    "build": "eleventy",
+    "optimize-images": "gulp optimizeImages",
+    "gzip": "gulp gzip",
+    "default": "gulp"
   },
   "keywords": [],
   "author": "",
@@ -15,14 +18,12 @@
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
     "gulp": "^5.0.0",
     "gulp-gzip": "^1.4.2",
-    "gulp-imagemin": "^9.1.0",
-    "luxon": "^3.0.1"
+    "gulp-imagemin": "^9.0.0",
+    "luxon": "^3.0.1",
+    "clean-css": "^5.1.9"
   },
   "engines": {
-    "node": ">=20.0.0"
+    "node": "20.x"
   },
-  "dependencies": {
-    "del": "^7.1.0",
-    "util": "^0.12.5"
-  }
+  "type": "module"
 }
