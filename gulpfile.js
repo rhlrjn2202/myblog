@@ -1,24 +1,23 @@
 import gulp from 'gulp';
-import gulpGzip from 'gulp-gzip';
+import imagemin from 'gulp-imagemin';
+import gzip from 'gulp-gzip';
 
-// Define the task for image optimization
-const optimizeImages = async () => {
-  // Dynamically import `gulp-imagemin` as an ES module
-  const { default: imagemin } = await import('gulp-imagemin');
-  return gulp.src('src/assets/**/*.{jpg,png,svg,webp}')
-    .pipe(imagemin())
-    .pipe(gulp.dest('public/assets'));
-};
+// Task to optimize images
+export function optimizeImages() {
+    return gulp.src('./src/assets/images/**/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./public/assets/images'));
+}
 
-// Define the task for gzipping files
-const gzip = () => {
-  return gulp.src('public/**/*.{html,css,js,json,xml}')
-    .pipe(gulpGzip())
-    .pipe(gulp.dest('public'));
-};
+// Task to create gzip files
+export function createGzip() {
+    return gulp.src('./public/**/*.{html,css,js}')
+        .pipe(gzip())
+        .pipe(gulp.dest('./public'));
+}
 
-// Export the tasks to the Gulp CLI
-export { optimizeImages, gzip };
-
-// Define the default task
-export default gulp.series(optimizeImages, gzip);
+// Define Gulp tasks
+export default gulp.series(
+    optimizeImages,
+    createGzip
+);

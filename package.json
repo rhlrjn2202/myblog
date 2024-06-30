@@ -1,13 +1,13 @@
 {
-  "name": "src",
+  "name": "myblog",
   "version": "1.0.0",
-  "description": "",
+  "description": "My blog project",
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
     "build": "eleventy",
     "optimize-images": "gulp optimizeImages",
-    "gzip": "gulp gzip",
+    "gzip": "gulp createGzip",
     "default": "gulp"
   },
   "keywords": [],
@@ -25,5 +25,5 @@
   "engines": {
     "node": "20.x"
   },
-  "type": "module"
+  "type": "commonjs"
 }
