@@ -10,3 +10,8 @@
 [dev]
   framework = "#auto"
   auto_rewrite = true
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
