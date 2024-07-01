@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy",
+    "build": "gulp build",
     "optimize-images": "gulp optimizeImages",
     "gzip": "gulp createGzip",
     "default": "gulp"
@@ -16,11 +16,14 @@
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
     "@quasibit/eleventy-plugin-sitemap": "^2.2.0",
-    "gulp": "^5.0.0",
+    "gulp": "^4.0.2",
     "gulp-gzip": "^1.4.2",
     "gulp-imagemin": "^9.0.0",
-    "luxon": "^3.0.1",
-    "clean-css": "^5.1.9"
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-terser": "^2.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "critical": "^3.0.4",
+    "luxon": "^3.0.1"
   },
   "engines": {
     "node": "20.x"
