@@ -58,6 +58,8 @@ Any keyboard's performance is paramount, and the ASUS Marshmallow KW100 excels i
 
 Scissor keys form the heart of the KW100's design, promoting a stable and accurate typing experience. With a lower profile and a satisfying tactile feedback, these keys ensure that each keystroke is both comfortable and precise. You will appreciate how the 1.6mm travel distance allows for efficient typing, reducing finger fatigue during extended sessions. Your typing accuracy will improve with the responsive nature of these well-engineered keys.
 
+![ASUS Marshmallow KW100](/assets/blog/asus_marshmallow_keyboard_2_.jpg)
+
 ### Quiet Operation and Ergonomics
 
 Some users prioritize a quiet typing environment, and the KW100 delivers with its <50 dB operation. This feature makes it an ideal choice for shared workspaces or home offices where discretion is key. Moreover, the keyboard’s arc-shaped design promotes a natural wrist alignment, enhancing your overall comfort while typing. This focus on ergonomics means you can enjoy longer typing sessions without discomfort.
