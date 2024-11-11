@@ -12,6 +12,7 @@ author: EcoTech Team
 date: 2024-08-01T12:32:28.989Z
 tags:
   - post
+  - featured
 image: https://app.textbuilder.ai/attachments/1/sustainable-tech-gadgets-and-climate-change-impact-vou.jpg
 imageALT: Sustainable Tech Gadgets Make A Positive Impact On Climate Change
 ---
