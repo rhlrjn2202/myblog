@@ -872,24 +872,6 @@ img.logo::after {
   overflow: hidden; /* Prevent overflow */
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
   transition: transform 0.3s; /* Smooth hover effect */
-}
-
-.article-snippet:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-}
-
-.article-snippet img {
-  width: 100%; /* Full width for images */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* Card Style for Article Snippets */
-.article-snippet {
-  background-color: var(--clr-neutral-100);
-  border-radius: 0.5em;
-  overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   text-align: center; /* Center text for better aesthetics */
@@ -897,7 +879,7 @@ img.logo::after {
 }
 
 .article-snippet:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px); /* Lift effect on hover */
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
