@@ -926,6 +926,61 @@ img.logo::after {
   }
 }
 
+/* Featured Articles Card Style */
+.featured-articles-list .article-snippet {
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  text-align: center; /* Center text for better aesthetics */
+  height: 350px; /* Set a fixed height for uniformity */
+}
+
+.featured-articles-list .snippet__image {
+  width: 100%;
+  height: 150px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure images cover the area */
+}
+
+.featured-articles-list .snippet__title {
+  font-size: var(--fs-400); /* Reduced font size for better aesthetics */
+  color: var(--clr-neutral-900);
+  margin: 0.5em 0; /* Add some spacing */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical; /* Required for line clamping */
+}
+
+.featured-articles-list .snippet__meta {
+  color: var(--clr-neutral-300);
+  font-size: var(--fs-300);
+  margin-bottom: 1em; /* Space below the meta info */
+}
+
+.featured-articles-list .snippet__body {
+  flex-grow: 1; /* Allow body to take up remaining space */
+  margin: 0.5em 0; /* Add some spacing */
+  color: var(--clr-neutral-600);
+  font-size: var(--fs-300);
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical; /* Required for line clamping */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .featured-articles-list {
+    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+  }
+}
+
 
 
 
