@@ -893,6 +893,7 @@ img.logo::after {
   display: flex;
   flex-direction: column;
   text-align: center; /* Center text for better aesthetics */
+  height: 100%; /* Ensure uniform height */
 }
 
 .article-snippet:hover {
@@ -910,12 +911,30 @@ img.logo::after {
   font-size: var(--fs-500);
   color: var(--clr-neutral-900);
   margin: 0.5em 0; /* Add some spacing */
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: 2; /* Limit to 2 lines */
+  -webkit-box-orient: vertical; /* Required for line clamping */
 }
 
 .snippet__meta {
   color: var(--clr-neutral-300);
   font-size: var(--fs-300);
   margin-bottom: 1em; /* Space below the meta info */
+}
+
+/* Add a body snippet */
+.snippet__body {
+  flex-grow: 1; /* Allow body to take up remaining space */
+  margin: 0.5em 0; /* Add some spacing */
+  color: var(--clr-neutral-600);
+  font-size: var(--fs-300);
+  overflow: hidden; /* Hide overflow */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  display: -webkit-box; /* For webkit browsers */
+  -webkit-line-clamp: 3; /* Limit to 3 lines */
+  -webkit-box-orient: vertical; /* Required for line clamping */
 }
 
 /* Responsive adjustments */
