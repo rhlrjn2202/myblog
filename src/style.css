@@ -867,15 +867,15 @@ img.logo::after {
 }
 
 .article-snippet {
-  background-color: var(--clr-neutral-100); /* Background color for articles */
-  border-radius: 0.5em; /* Rounded corners */
-  overflow: hidden; /* Prevent overflow */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s; /* Smooth hover effect */
+  background-color: var(--clr-neutral-100);
+  border-radius: 0.5em;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
   display: flex;
   flex-direction: column;
   text-align: center; /* Center text for better aesthetics */
-  height: 100%; /* Ensure uniform height */
+  height: 350px; /* Set a fixed height for uniformity */
 }
 
 .article-snippet:hover {
@@ -885,12 +885,12 @@ img.logo::after {
 
 .snippet__image {
   width: 100%;
-  height: auto;
+  height: 150px; /* Set a fixed height for images */
   object-fit: cover; /* Ensure images cover the area */
 }
 
 .snippet__title {
-  font-size: var(--fs-500);
+  font-size: var(--fs-400); /* Reduced font size for better aesthetics */
   color: var(--clr-neutral-900);
   margin: 0.5em 0; /* Add some spacing */
   overflow: hidden; /* Hide overflow */
@@ -921,7 +921,7 @@ img.logo::after {
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
-  .articles__list.grid {
+  .articles__list {
     grid-template-columns: 1fr; /* Stack cards on smaller screens */
   }
 }
