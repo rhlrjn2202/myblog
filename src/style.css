@@ -928,10 +928,10 @@ img.logo::after {
 
 /* Featured Articles Card Style */
 .featured-articles-list {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  display: flex; /* Use Flexbox for alignment */
+  flex-wrap: wrap; /* Allow wrapping to the next line */
+  justify-content: center; /* Center the items */
   gap: 1.5em; /* Space between items */
-  justify-content: center; /* Center the grid items */
 }
 
 .featured-articles-list .article-snippet {
@@ -985,7 +985,8 @@ img.logo::after {
 /* Responsive adjustments */
 @media (max-width: 600px) {
   .featured-articles-list {
-    grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    flex-direction: column; /* Stack cards on smaller screens */
+    align-items: center; /* Center items */
   }
 }
 
