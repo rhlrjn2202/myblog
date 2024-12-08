@@ -24,7 +24,7 @@ layout: 'base.njk'
   <div class="container flow">
     <h2 class="section-title text-center">Featured articles</h2>
     <p class="text-center">Here are some sample articles that showcase what our site is all about.</p>
-    <ul role="list" class="articles__list flow">
+    <ul role="list" class="articles__list flow grid">
       {%- for post in collections.featured | reverse -%}
         {% include 'article-snippet.njk' %}
       {%- endfor -%}
