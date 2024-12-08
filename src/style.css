@@ -927,6 +927,13 @@ img.logo::after {
 }
 
 /* Featured Articles Card Style */
+.featured-articles-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 1.5em; /* Space between items */
+  justify-content: center; /* Center the grid items */
+}
+
 .featured-articles-list .article-snippet {
   background-color: var(--clr-neutral-100);
   border-radius: 0.5em;
