@@ -936,7 +936,8 @@ img.logo::after {
   display: flex;
   flex-direction: column;
   text-align: center; /* Center text for better aesthetics */
-  height: 350px; /* Set a fixed height for uniformity */
+  width: 300px; /* Set a fixed width for uniformity */
+  height: 300px; /* Set a fixed height for uniformity */
 }
 
 .featured-articles-list .snippet__image {
